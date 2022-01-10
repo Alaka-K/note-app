@@ -23,10 +23,3 @@ describe('NotesApp class', () => {
     expect(model.getNotes().length).toEqual(0);
   });
 });
-
-
-
-
-// model.reset();
-
-// model.getNotes(); // should now return []
