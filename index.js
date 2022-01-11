@@ -5,6 +5,6 @@ const NotesModel = require('./notesModel')
 //
 // on Mac (using Chrome), use Option+Command+J to open the console and see this message.
 
-notes = new NotesModel()
+const notes = new NotesModel()
 
 console.log(notes.getNotes());
