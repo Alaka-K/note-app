@@ -31,14 +31,15 @@
       var NotesView2 = class {
         constructor(model) {
           this.model = model;
+          this.mainContainerEl = document.querySelector("#main-container");
         }
         displayNotes() {
-          this.model.getNotes().forEach((note) => {
+          const notes2 = this.model.getNotes();
+          notes2.forEach((note) => {
             var newDiv = document.createElement("div");
-            newDiv.classList.add("note");
-            const mainDiv = document.querySelector("#main-container");
-            newDiv.append(note);
-            mainDiv.append(newDiv);
+            newDiv.className = "note";
+            newDiv.innerText = note;
+            this.mainContainerEl.append(newDiv);
           });
         }
       };
